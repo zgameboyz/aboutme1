@@ -10,25 +10,29 @@ function getUserName () {
   return userName;
 }
 
-getUserName();
+let checkUserName = getUserName();
 
 
 
-let points = 0; // Steven Brown helped me with this.
 
 
-// let workExp = prompt('Did Q work in Security?');
+function getPoints() {
+  let points = 0; // Steven Brown helped me with this.
+  points++;
+  return points;
+}
 
+let workExp = prompt('Did Q work in Security?');
 
-// let lowerCaseWork = workExp.toLocaleLowerCase();
-// if (lowerCaseWork === 'yes' || lowerCaseWork === 'y') {
-//   alert('Good Job! I did work in Security.');
-//   points++;
-// } else if (lowerCaseWork === 'no'|| lowerCaseWork === 'n') {
-//   alert('Sorry, Wrong Anwser');
-// } else {
-//   alert('Looks like you didn\'t read the question');
-// }
+let lowerCaseWork = workExp.toLocaleLowerCase();
+if (lowerCaseWork === 'yes' || lowerCaseWork === 'y') {
+  alert('Good Job! I did work in Security.');
+  getPoints();
+} else if (lowerCaseWork === 'no'|| lowerCaseWork === 'n') {
+  alert('Sorry, Wrong Anwser');
+} else {
+  alert('Looks like you didn\'t read the question');
+}
 
 // let favMovie = prompt('Does Q like the "Lord of the Rings" (lotr) Movie Trilogy? ');
 
@@ -85,29 +89,30 @@ let points = 0; // Steven Brown helped me with this.
 // }
 
 
-// alert('Now, ' + userName + '.' + ' Now it\'s time for a guessing Game!');
 
-// let myFavMedia = ['lotr', 'asoiaf', 'avatar the last airbender', 'harry potter', 'dc', 'dragon ball', 'marvel', 'monster', 'world war Z', 'star wars'];
+alert('Now, ' + checkUserName + '.' + ' Now it\'s time for a guessing Game!');
 
-// let counter = 5;
-// let theyGotItRight = false;
-// while (theyGotItRight === false && counter > 0) {
-//   alert('you have ' + counter + ' guesses');
-//   let userGuess1 = prompt('Guess one of my favorite series?');
-//   let userGuess = userGuess1.toLowerCase();
+let myFavMedia = ['lotr', 'asoiaf', 'avatar the last airbender', 'harry potter', 'dc', 'dragon ball', 'marvel', 'monster', 'world war Z', 'star wars'];
 
-//   for (let i = 0; i < myFavMedia.length; i++) {
-//     if (userGuess === myFavMedia[i]) {
-//       alert('You got it right!');
-//       theyGotItRight = true;
-//       points++;
-//     }
-//   }
-//   if (theyGotItRight === false) {
-//     alert('I am sorry you are incorrect, guess again.');
-//   }
-//   counter--;
-// }
+let counter = 5;
+let theyGotItRight = false;
+while (theyGotItRight === false && counter > 0) {
+  alert('you have ' + counter + ' guesses');
+  let userGuess1 = prompt('Guess one of my favorite series?');
+  let userGuess = userGuess1.toLowerCase();
+
+  for (let i = 0; i < myFavMedia.length; i++) {
+    if (userGuess === myFavMedia[i]) {
+      alert('You got it right!');
+      theyGotItRight = true;
+      getPoints();
+    }
+  }
+  if (theyGotItRight === false) {
+    alert('I am sorry you are incorrect, guess again.');
+  }
+  counter--;
+}
 
 
 
@@ -129,4 +134,4 @@ let points = 0; // Steven Brown helped me with this.
 
 
 
-alert('Thanks for playing ' + userName + ', you got ' + points + ' points. Nice!');
+alert('Thanks for playing ' + checkUserName + ', you got ' + getPoints() + ' points. Nice!'); // Joel Connell helped me with this.
