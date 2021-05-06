@@ -14,86 +14,109 @@ let checkUserName = getUserName();
 
 
 
-
+let points = 0; // Steven Brown helped me with this.
 
 function getPoints() {
-  let points = 0; // Steven Brown helped me with this.
   points++;
   return points;
 }
 
 let workExp = prompt('Did Q work in Security?');
 
-let lowerCaseWork = workExp.toLocaleLowerCase();
-if (lowerCaseWork === 'yes' || lowerCaseWork === 'y') {
-  alert('Good Job! I did work in Security.');
-  getPoints();
-} else if (lowerCaseWork === 'no'|| lowerCaseWork === 'n') {
-  alert('Sorry, Wrong Anwser');
-} else {
-  alert('Looks like you didn\'t read the question');
+function getWorkExp(){
+  
+  let lowerCaseWork = workExp.toLocaleLowerCase();
+  if (lowerCaseWork === 'yes' || lowerCaseWork === 'y') {
+    alert('Good Job! I did work in Security.');
+    getPoints();
+  } else if (lowerCaseWork === 'no'|| lowerCaseWork === 'n') {
+    alert('Sorry, Wrong Anwser');
+  } else {
+    alert('Looks like you didn\'t read the question');
+  }
+
+
 }
-
-// let favMovie = prompt('Does Q like the "Lord of the Rings" (lotr) Movie Trilogy? ');
-
-// let lowerCaseFavMovie = favMovie.toLocaleLowerCase();
+getWorkExp();
 
 
-// if (lowerCaseFavMovie === 'yes' || lowerCaseFavMovie === 'y') {
-//   alert('Yup! The extended version of course.');
-//   points++;
-// } else if (lowerCaseFavMovie === 'no'|| lowerCaseFavMovie === 'n') {
-//   alert('Sorry, Wrong Anwser');
-// } else {
-//   alert('Looks like you didn\'t read the question.');
-// }
 
-// let bookPoster = prompt('Does Q own a map of the Middle Earth?');
+let favMovie = prompt('Does Q like the "Lord of the Rings" (lotr) Movie Trilogy? ');
 
-// let lowerCaseBookPoster = bookPoster.toLocaleLowerCase();
+let lowerCaseFavMovie = favMovie.toLocaleLowerCase();
 
-// if (lowerCaseBookPoster === 'yes' || lowerCaseBookPoster === 'y') {
-//   alert('Correct! It\'s my favorite thing on my wall.');
-//   points++;
-// } else if (lowerCaseBookPoster === 'no' || lowerCaseBookPoster === 'no') {
-//   alert('Sorry, Wrong Answer');
-// } else {
-//   alert('Looks like you didn\'t read the question.');
-// }
+function getFavMovie(){
+
+  if (lowerCaseFavMovie === 'yes' || lowerCaseFavMovie === 'y') {
+    alert('Yup! The extended version of course.');
+    getPoints();
+  } else if (lowerCaseFavMovie === 'no'|| lowerCaseFavMovie === 'n') {
+    alert('Sorry, Wrong Anwser');
+  } else {
+    alert('Looks like you didn\'t read the question.');
+  }
+  
+}
+getFavMovie();
 
 
-// let bookReading = prompt('Does Q like to read?');
+let bookPoster = prompt('Does Q own a map of the Middle Earth?');
 
-// let lowerCaseBook = bookReading.toLocaleLowerCase();
+let lowerCaseBookPoster = bookPoster.toLocaleLowerCase();
+function getBookPoster(){
 
-// if (lowerCaseBook === 'yes' || lowerCaseBook === 'y') {
-//   alert('Correct!');
-//   points++;
-// } else if (lowerCaseBook === 'no' || lowerCaseBook === 'n') {
-//   alert('Sorry, Wrong Answer');
-// } else {
-//   alert('Looks like you didn\'t read the question.');
-// }
+  if (lowerCaseBookPoster === 'yes' || lowerCaseBookPoster === 'y') {
+    alert('Correct! It\'s my favorite thing on my wall.');
+    getPoints();
+  } else if (lowerCaseBookPoster === 'no' || lowerCaseBookPoster === 'no') {
+    alert('Sorry, Wrong Answer');
+  } else {
+    alert('Looks like you didn\'t read the question.');
+  }
 
-// let favShow = prompt('Does Q like Avatar the Last Airbender (atla)?');
+}
+getBookPoster();
 
-// let lowerCaseFavShow = favShow.toLocaleLowerCase();
+let bookReading = prompt('Does Q like to read?');
 
-// if (lowerCaseFavShow === 'yes' || lowerCaseFavShow === 'y') {
-//   alert('Correct!');
-//   points++;
-// } else if (lowerCaseFavShow === 'no' || lowerCaseFavShow === 'n') {
-//   alert('Sorry, Wrong Answer');
-// } else {
-//   alert('Looks like you didn\'t READ the question.');
-// }
+let lowerCaseBook = bookReading.toLocaleLowerCase();
 
+function getBookReading(){
+  
+  if (lowerCaseBook === 'yes' || lowerCaseBook === 'y') {
+    alert('Correct!');
+    getPoints();
+  } else if (lowerCaseBook === 'no' || lowerCaseBook === 'n') {
+    alert('Sorry, Wrong Answer');
+  } else {
+    alert('Looks like you didn\'t read the question.');
+  }
+
+}
+getBookReading();
+
+let favShow = prompt('Does Q like Avatar the Last Airbender (atla)?');
+
+let lowerCaseFavShow = favShow.toLocaleLowerCase();
+
+function getFavShow(){
+
+  if (lowerCaseFavShow === 'yes' || lowerCaseFavShow === 'y') {
+    alert('Correct!');
+    getPoints();
+  } else if (lowerCaseFavShow === 'no' || lowerCaseFavShow === 'n') {
+    alert('Sorry, Wrong Answer');
+  } else {
+    alert('Looks like you didn\'t READ the question.');
+  }
+}
+getFavShow();
 
 
 alert('Now, ' + checkUserName + '.' + ' Now it\'s time for a guessing Game!');
 
 let myFavMedia = ['lotr', 'asoiaf', 'avatar the last airbender', 'harry potter', 'dc', 'dragon ball', 'marvel', 'monster', 'world war Z', 'star wars'];
-
+function getFavMedia(){
 let counter = 5;
 let theyGotItRight = false;
 while (theyGotItRight === false && counter > 0) {
@@ -113,25 +136,33 @@ while (theyGotItRight === false && counter > 0) {
   }
   counter--;
 }
+}
+getFavMedia();
+  
 
 
 
-// let myNum = 7;
+let myNum = 7;
+function getMyNum(){
 
-// for (let i = 0; i < 5; i++) {
-//   let userGuess = prompt('Guess a number between 1 to 10.');
-//   let numericalGuess = parseInt(userGuess);
-//   if (numericalGuess === myNum) {
-//     alert('Great Job!');
-//     points++;
-//     break;
-//   } else if (numericalGuess > myNum) {
-//     alert('Too high! Try again.');
-//   } else if (numericalGuess < myNum) {
-//     alert('Too low! Try again.');
-//   }
-// }
+  for (let i = 0; i < 5; i++) {
+    let userGuess = prompt('Guess a number between 1 to 10.');
+    let numericalGuess = parseInt(userGuess);
+    if (numericalGuess === myNum) {
+      alert('Great Job!');
+      points++;
+      break;
+    } else if (numericalGuess > myNum) {
+      alert('Too high! Try again.');
+    } else if (numericalGuess < myNum) {
+      alert('Too low! Try again.');
+    }
+  }
+}
+getMyNum();
 
+function getAlert(){
 
-
-alert('Thanks for playing ' + checkUserName + ', you got ' + getPoints() + ' points. Nice!'); // Joel Connell helped me with this.
+  alert('Thanks for playing ' + checkUserName + ', you got ' + points + ' points. Nice!'); // Joel Connell helped me with this.
+}
+getAlert();
